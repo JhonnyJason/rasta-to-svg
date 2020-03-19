@@ -72,7 +72,7 @@
         "copy-ressources": "sources/ressources/copyscript.sh",
         "release": "toolset/thingy-build-system/pwa/release-script.sh",
         "clean-css": "cleancss -O2 'specialComments:0' /home/lenny/thingies/rasta-to-svg/toolset/build/css/dirty/index.css --output /home/lenny/thingies/rasta-to-svg/toolset/build/css/clean/index.css",
-        "purge-css": "purgecss --css /home/lenny/thingies/rasta-to-svg/toolset/build/css/clean/index.css --content /home/lenny/thingies/rasta-to-svg/toolset/build/html/pretty/index.html --out /home/lenny/thingies/rasta-to-svg/toolset/build/css/purged",
+        "purge-css": "purgecss --css /home/lenny/thingies/rasta-to-svg/toolset/build/css/clean/index.css --content /home/lenny/thingies/rasta-to-svg/toolset/build/html/pretty/index.html --output /home/lenny/thingies/rasta-to-svg/toolset/build/css/purged",
         "connect-dom": "implicit-dom-connect /home/lenny/thingies/rasta-to-svg/sources/page-heads/index/document-head.pug 'sources/source/*/*.coffee' /home/lenny/thingies/rasta-to-svg/sources/source/domconnect/indexdomconnect.coffee",
         "watch-connect-dom": "implicit-dom-connect /home/lenny/thingies/rasta-to-svg/sources/page-heads/index/document-head.pug 'sources/source/*/*.coffee' /home/lenny/thingies/rasta-to-svg/sources/source/domconnect/indexdomconnect.coffee -w"
     },
@@ -97,7 +97,7 @@
         "browser-sync": "^2.26.7",
         "clean-css-cli": "^4.3.0",
         "html-minifier": "^4.0.0",
-        "implicit-dom-connect": "^0.2.1",
+        "implicit-dom-connect": "^0.2.2",
         "pug-cli": "^1.0.0-alpha6",
         "purgecss": "^2.1.0",
         "stylus": "^0.54.7",
