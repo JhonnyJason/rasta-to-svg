@@ -40,11 +40,11 @@
         "minify-html": "html-minifier --input-dir toolset/build/html/pretty/ --output-dir toolset/build/html/minified/ --file-ext html --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --use-short-doctype --minify-js true --minify-css true",
         "prepare-webpack": "run-s rebuild-webpack-worker-config rebuild-webpack-config",
         "dev-bundle": "webpack-cli --config .build-config/webpack-dev.config.js",
-        "dev-worker-bundle": "echo 'no worker'",
+        "dev-worker-bundle": "webpack-cli --config .build-config/webpack-dev-worker.config.js",
         "watch-bundle": "webpack-cli --config .build-config/webpack-watch.config.js",
-        "watch-worker-bundle": "echo 'no worker'",
+        "watch-worker-bundle": "webpack-cli --config .build-config/webpack-watch-worker.config.js",
         "deploy-bundle": "webpack-cli --config .build-config/webpack-deploy.config.js",
-        "deploy-worker-bundle": "echo 'no worker'",
+        "deploy-worker-bundle": "webpack-cli --config .build-config/webpack-deploy-worker.config.js",
         "build-style": "stylus toolset/build/heads/styl/* -o toolset/build/css/dirty/ --include-css",
         "watch-style": "stylus -w toolset/build/heads/styl/* -o toolset/build/css/dirty/ --include-css",
         "pageheadcreate": "cd sources/page-heads && thingymodulecreate",
@@ -70,11 +70,7 @@
         "copy-minified-html": "toolset/thingy-build-system/pwa/copy-minified-html.sh",
         "copy-deploy-worker": "toolset/thingy-build-system/pwa/copy-deploy-worker.sh",
         "copy-ressources": "sources/ressources/copyscript.sh",
-        "release": "toolset/thingy-build-system/pwa/release-script.sh",
-        "clean-css": "cleancss -O2 'specialComments:0' /home/lenny/thingies/rasta-to-svg/toolset/build/css/dirty/index.css --output /home/lenny/thingies/rasta-to-svg/toolset/build/css/clean/index.css",
-        "purge-css": "purgecss --css /home/lenny/thingies/rasta-to-svg/toolset/build/css/clean/index.css --content /home/lenny/thingies/rasta-to-svg/toolset/build/html/pretty/index.html --output /home/lenny/thingies/rasta-to-svg/toolset/build/css/purged",
-        "connect-dom": "implicit-dom-connect /home/lenny/thingies/rasta-to-svg/sources/page-heads/index/document-head.pug 'sources/source/*/*.coffee' /home/lenny/thingies/rasta-to-svg/sources/source/domconnect/indexdomconnect.coffee",
-        "watch-connect-dom": "implicit-dom-connect /home/lenny/thingies/rasta-to-svg/sources/page-heads/index/document-head.pug 'sources/source/*/*.coffee' /home/lenny/thingies/rasta-to-svg/sources/source/domconnect/indexdomconnect.coffee -w"
+        "release": "toolset/thingy-build-system/pwa/release-script.sh"
     },
     "repository": {
         "type": "git",
